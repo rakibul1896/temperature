@@ -1,19 +1,4 @@
 
-let autocomplete;
-function initMap (){
-  autocomplete = new google.maps.places.Autocomplete(
-    document.getElementById('autocomplete'), 
-    {
-      types: ["establishment"],
-      componentRestrictions: { country: "us" },
-      fields: ["address_components", "geometry", "icon", "name"],
-    });
-  // autocomplete.addListener('place_changed', onPlaceChanged);
-}
-
-
-
-
 
 // ** changeName start here
 
@@ -25,10 +10,10 @@ function changeName() {
   let value = infoCityName.innerText;
   let urlFirst;
   if(cityName === '') {
-    urlFirst = `http://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
+    urlFirst = `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
    
  }else {
-  urlFirst = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
+  urlFirst = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
 
  }
  
@@ -85,10 +70,10 @@ function changeName() {
 // ** 2nd api 
   let urlSecond;
   if(cityName === '') {
-    urlSecond = `http://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
+    urlSecond = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
    
  }else {
-   urlSecond = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
+   urlSecond = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=3783fa69d86d1c9f665bc262772a0ea9`;
 
  }
 
