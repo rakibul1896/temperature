@@ -242,3 +242,38 @@ function chartJs (date,temp){
 }
 
 // ** humidityJs End here
+
+
+ let confiqIcon = document.querySelector('.confiqIcon');
+  let cross = document.querySelector('.cross');
+  let bar = document.querySelector('.bar');
+
+const showNav = () => {
+  confiqIcon.style.display = 'none';
+  cross.style.display = 'block';
+  bar.style.display = 'block';
+}
+
+const hideNav = () => {
+  confiqIcon.style.display = 'block';
+  cross.style.display = 'none';
+  bar.style.display = 'none';
+}
+
+
+
+
+const hideIcon = () => {
+  console.log('hi')
+  if(window.innerWidth > 540) {
+    confiqIcon.style.display = 'none';
+    cross.style.display = 'none';
+    bar.style.display = 'block';
+  } else {
+    confiqIcon.style.display = 'block';
+    cross.style.display = 'none';
+    bar.style.display = 'none';
+  }
+}
+
+window.addEventListener('resize', hideIcon);
